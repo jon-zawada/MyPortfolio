@@ -1,27 +1,28 @@
 import Mock from "../mock";
+import { calculateAge } from "../../utils/utils";
 
 const database = {
   information: {
-    name: 'Devid Chestocijoierjfer',
-    aboutContent: "I am a frontend web developer. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.",
-    age: 24,
+    name: 'Jon Zawada',
+    aboutContent: "I am a fullstack web developer. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.",
+    age: calculateAge("1994-09-12"),
     phone: '',
     nationality: 'American',
-    language: 'English, French',
-    email: '',
-    address: '121 King Street, Melbourne, Australia',
+    language: 'English, Spanish',
+    email: 'jon.zawad@gmail.com',
+    address: '',
     freelanceStatus: 'Available',
     socialLinks: {
-      facebook: 'https://facebook.com',
-      twitter: 'https://twitter.com',
+      facebook: '',
+      twitter: '',
       pinterest: '',
       behance: '',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/jonathan-zawada/',
       dribbble: '',
-      github: 'https://github.com'
+      github: 'https://github.com/jon-zawada'
     },
     brandImage: '/images/brand-image.jpg',
-    aboutImage: '/images/about-image.jpg',
+    aboutImage: '/images/about-image-jon.jpg',
     aboutImageLg: '/images/about-image-lg.jpg',
     cvfile: '/files/empty.pdf'
   },
@@ -281,48 +282,41 @@ const database = {
     workingExperience: [
       {
         id: 1,
-        year: "2018 - Present",
-        position: "Frontend Web Developer",
-        company: "Abc Company",
-        details: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro."
+        year: "2021 - Present",
+        position: "Software Engineer II",
+        company: "DocuSign",
+        details: "Fullstack engineer on the admin team. Focus on user, account, and organization management as well as access control and general settings."
       },
       {
         id: 2,
-        year: "2016 - 2018",
-        position: "Frontend Web Developer",
-        company: "CBA Company",
-        details: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro."
+        year: "2020 - 2020",
+        position: "Lead Software Engineering Immersive Resident",
+        company: "Hack Reactor",
+        details: "Taught and mentored over 200 junior engineers on computer science fundamentals, data structures/algorithms, modern full-stack web development technologies, databases, and app deployment technologies."
       },
       {
         id: 3,
-        year: "2014 - 1016",
-        position: "UI/UX Designer",
-        company: "Example Company",
-        details: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro."
+        year: "2015 - 2019",
+        position: "Wraparound Coordinator",
+        company: "Family Care Network, Inc.",
+        details: "Automated internal auditing system to ensure compliance with licensing regulations regarding foster care documentation."
       }
     ],
     educationExperience: [
       {
         id: 1,
-        year: "2018 - 2019",
-        graduation: "Master of Science",
-        university: "Abc University",
-        details: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro."
+        year: "2020",
+        graduation: "Software Engineer Bootcamp",
+        university: "Hack Reactor",
+        details: "Completed intensive Software Engineering Bootcamp at Hack Reactor, specializing in JavaScript, Node.js, React, and modern web development technologies."
       },
       {
         id: 2,
         year: "2016 - 2018",
-        graduation: "Bachelor of Science",
-        university: "Abc University",
-        details: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro."
+        graduation: "Bachelor of Science - Psychology",
+        university: "California Polytechnic State University - San Luis Obispo",
+        details: "Graduated with a Bachelor of Science in Psychology from Cal Poly San Luis Obispo, gaining comprehensive knowledge in psychological theories, research methodologies, and behavioral analysis."
       },
-      {
-        id: 3,
-        year: "2015 - 2016",
-        graduation: "Higher Schoold Graduation",
-        university: "Abc College",
-        details: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro."
-      }
     ]
   },
   blogs: [
