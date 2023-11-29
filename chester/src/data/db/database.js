@@ -21,7 +21,7 @@ const database = {
       dribbble: '',
       github: 'https://github.com/jon-zawada'
     },
-    brandImage: '/images/brand-image.jpg',
+    brandImage: '/images/jonshead.jpg',
     aboutImage: '/images/about-image-jon.jpg',
     aboutImageLg: '/images/about-image-lg.jpg',
     cvfile: '/files/jonathan_zawada_resume.pdf'
