@@ -24,7 +24,7 @@ const database = {
     brandImage: '/images/brand-image.jpg',
     aboutImage: '/images/about-image-jon.jpg',
     aboutImageLg: '/images/about-image-lg.jpg',
-    cvfile: '/files/empty.pdf'
+    cvfile: '/files/jonathan_zawada_resume.pdf'
   },
   services: [
     {
