@@ -56,7 +56,7 @@ img {
   max-width: 100%;
 }
 
-@include placeholder-color($color-body);
+// @include placeholder-color($color-body);
 
 h1,
 h2,
@@ -182,7 +182,7 @@ textarea {
   border: 1px solid $color-border;
   font-family: $ff-body;
   color: $color-body;
-  @include placeholder-color($color-body);
+  // @include placeholder-color($color-body);
 
   &:focus,
   &:active {

@@ -18,7 +18,7 @@
     background: $light-color-bg-body;
   }
 
-  @include placeholder-color($light-color-body);
+  // @include placeholder-color($light-color-body);
 
   h1,
   h2,
@@ -55,7 +55,7 @@
   textarea {
     border-color: $light-color-border;
     color: $light-color-body;
-    @include placeholder-color($light-color-body);
+    // @include placeholder-color($light-color-body);
 
     &:focus,
     &:active {
