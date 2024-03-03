@@ -58,10 +58,10 @@ function About() {
   return (
     <Layout>
       <Helmet>
-        <title>About - Chester React Personal Portfolio Template</title>
+        <title>Portfolio - About</title>
         <meta
           name="description"
-          content="Chester React Personal Portfolio Template About Page"
+          content=""
         />
       </Helmet>
       <Suspense fallback={<Spinner />}>
@@ -152,7 +152,7 @@ function About() {
             </div>
           </div>
         </div>
-        <div className="mi-service-area mi-section mi-padding-top">
+        {/* <div className="mi-service-area mi-section mi-padding-top">
           <div className="container">
             <Sectiontitle title="Services" />
             <div className="mi-service-wrapper">
@@ -182,7 +182,7 @@ function About() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </Suspense>
     </Layout>
   );

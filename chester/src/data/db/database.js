@@ -4,7 +4,7 @@ import { calculateAge } from "../../utils/utils";
 const database = {
   information: {
     name: 'Jon Zawada',
-    aboutContent: "I am a fullstack web developer. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.",
+    aboutContent: "I am a fullstack software engineer skilled in implementing optimal code patterns and adhering to industry standards. My passion lies in ensuring that each application I work on is both engaging and technically sound.",
     age: calculateAge("1994-09-12"),
     phone: '',
     nationality: 'American',
@@ -23,7 +23,7 @@ const database = {
     },
     brandImage: '/images/hackreactor.jpg',
     aboutImage: '/images/about-image-jon.jpg',
-    aboutImageLg: '/images/about-image-lg.jpg',
+    aboutImageLg: '/images/about-image-jon.jpg',
     cvfile: '/files/jonathan_zawada_resume.pdf'
   },
   services: [
@@ -95,25 +95,14 @@ const database = {
       value: 65
     }
   ],
-  portfolios: [
+  projects: [
     {
       id: 1,
-      title: "T-shirt Mockup",
-      subtitle: "A beautiful t-shirt mockup.",
-      imageUrl: "/images/portfolio-image-1.jpg",
+      title: "Note Down",
+      subtitle: "Easily categorize and personalize your notes using tags and markdown features",
+      imageUrl: "/images/project-image-notes-app.jpg",
       largeImageUrl: ["/images/portfolio-image-1-lg.jpg"],
-      url: 'https://dribbble.com'
-    },
-    {
-      id: 2,
-      title: "Coffee Mug",
-      subtitle: "Awesome coffee mug design.",
-      imageUrl: "/images/portfolio-image-4.jpg",
-      largeImageUrl: [
-        "/images/portfolio-image-4-lg.jpg",
-        "/images/portfolio-image-4-lg2.jpg"
-      ],
-      url: 'https://facebook.com'
+      url: 'https://sprightly-nougat-2f5320.netlify.app/'
     },
   ],
   experience: {
@@ -322,8 +311,8 @@ Mock.onGet("/api/skills").reply(config => {
   return [200, response];
 });
 
-Mock.onGet("/api/portfolios").reply(config => {
-  const response = database.portfolios;
+Mock.onGet("/api/projects").reply(config => {
+  const response = database.projects;
   return [200, response];
 });
 
