@@ -27,7 +27,7 @@ function Header() {
           <LineIcon name="close" />
         )}
       </button>
-      <div className="mi-header-inner">
+      <div style={{display: "flex", flexDirection: "column"}}>
         <div className="mi-header-image">
           <Link to="/">
             <ProgressiveImage
@@ -56,11 +56,11 @@ function Header() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/portfolios">
-              <span>Portfolios</span>
+            <NavLink to="/projects">
+              <span>Projects</span>
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/blogs">
               <span>Blogs</span>
             </NavLink>
@@ -69,20 +69,8 @@ function Header() {
             <NavLink to="/contact">
               <span>Contact</span>
             </NavLink>
-          </li>
+          </li> */}
         </ul>
-        <p className="mi-header-copyright">
-          &copy; {new Date().getFullYear()}{" "}
-          <b>
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://nuclearthemes.com"
-            >
-              NuclearThemes
-            </a>
-          </b>
-        </p>
       </div>
     </nav>
   );

@@ -3,18 +3,18 @@ import React, { Suspense, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import Layout from "../components/Layout";
 import Pagination from "../components/Pagination";
-import PortfoliosView from "../components/PortfoliosView";
+import ProjectsView from "../components/ProjectsView";
 import Sectiontitle from "../components/Sectiontitle";
 import Spinner from "../components/Spinner";
 
-function Portfolios() {
+function Projects() {
   const [portfolios, setPortfoios] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [portfoliosPerPage] = useState(9);
 
   useEffect(() => {
     let mounted = true;
-    axios.get("/api/portfolios").then((response) => {
+    axios.get("/api/projects").then((response) => {
       if (mounted) {
         setPortfoios(response.data);
       }
@@ -33,21 +33,20 @@ function Portfolios() {
     e.preventDefault();
     setCurrentPage(pageNumber);
   };
-
   return (
     <Layout>
       <Helmet>
-        <title>Portfolios - Chester React Personal Portfolio Template</title>
+        <title>Portfolio - Projects</title>
         <meta
           name="description"
-          content="Chester React Personal Portfolio Template Portfolios Page"
+          content=""
         />
       </Helmet>
       <Suspense fallback={<Spinner />}>
         <div className="mi-about mi-section mi-padding-top mi-padding-bottom">
           <div className="container">
             <Sectiontitle title="Portfolios" />
-            {<PortfoliosView portfolios={currentPortfolios} />}
+            {<ProjectsView projects={currentPortfolios} />}
             {!(portfolios.length > portfoliosPerPage) ? null : (
               <Pagination
                 className="mt-50"
@@ -64,4 +63,4 @@ function Portfolios() {
   );
 }
 
-export default Portfolios;
+export default Projects;
