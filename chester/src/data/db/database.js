@@ -101,7 +101,7 @@ const database = {
       title: "Note Down",
       subtitle: "Easily categorize and personalize your notes using tags and markdown features",
       imageUrl: "/images/project-image-notes-app.jpg",
-      largeImageUrl: ["/images/portfolio-image-1-lg.jpg"],
+      largeImageUrl: ["/images/project-image-notes-app.jpg"],
       url: 'https://sprightly-nougat-2f5320.netlify.app/'
     },
   ],
