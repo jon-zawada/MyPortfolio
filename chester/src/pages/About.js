@@ -59,10 +59,7 @@ function About() {
     <Layout>
       <Helmet>
         <title>Portfolio - About</title>
-        <meta
-          name="description"
-          content=""
-        />
+        <meta name="description" content="" />
       </Helmet>
       <Suspense fallback={<Spinner />}>
         <div className="mi-about-area mi-section mi-padding-top">
@@ -98,9 +95,13 @@ function About() {
                     I am <span className="color-theme">{information.name}</span>
                   </h3>
                   <p>
-                    I am a frontend web developer. I can provide clean code and
-                    pixel perfect design. I also make website more & more
-                    interactive with web animations.
+                    Hey, I'm Jon, a software engineer currently at DocuSign.
+                    With over four years in the field, I'm passionate about
+                    bringing innovative ideas to life both professionally and in
+                    my personal projects. Outside of coding, I enjoy competitive
+                    online gaming, outdoor adventures, and playing the piano.
+                    I'm excited to hear about new opportunities and how I can
+                    make my mark in the world.
                   </p>
                   <ul>
                     {!information.name ? null : (
