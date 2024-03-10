@@ -44,7 +44,7 @@ function Resumes() {
             <div style={{display: "flex", width: "100%", justifyContent: "space-between"}}>
               <Smalltitle title="Working Experience" icon="briefcase" />
               <a href={information.cvfile} className="mi-button">
-                Download CV
+                Download
               </a>
             </div>
             <div className="mi-resume-wrapper">
