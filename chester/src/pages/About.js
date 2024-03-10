@@ -95,7 +95,7 @@ function About() {
                     I am <span className="color-theme">{information.name}</span>
                   </h3>
                   <p>
-                    Hey, I'm Jon, a software engineer currently at DocuSign.
+                    a software engineer currently at DocuSign.
                     With over four years in the field, I'm passionate about
                     bringing innovative ideas to life both professionally and in
                     my personal projects. Outside of coding, I enjoy competitive
