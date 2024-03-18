@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { Suspense, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import TrackVisibility from "react-on-screen";
-import Layout from "../components/Layout";
 import Progress from "../components/Progress";
 import Resume from "../components/Resume";
 import Sectiontitle from "../components/Sectiontitle";
@@ -29,7 +28,7 @@ function Resumes() {
   }, []);
 
   return (
-    <Layout>
+    <>
       <Helmet>
         <title>Portfolio - Resume</title>
         <meta
@@ -80,7 +79,7 @@ function Resumes() {
           </div>
         </div> */}
       </Suspense>
-    </Layout>
+    </>
   );
 }
 

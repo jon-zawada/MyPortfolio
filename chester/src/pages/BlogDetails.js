@@ -3,7 +3,6 @@ import Markdown from "markdown-to-jsx";
 import React, { Suspense, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
-import Layout from "../components/Layout";
 import Spinner from "../components/Spinner";
 
 function BlogDetails(props) {
@@ -32,7 +31,7 @@ function BlogDetails(props) {
   };
 
   return (
-    <Layout>
+    <>
       <Helmet>
         <title>Blog Details - Chester React Personal Portfolio Template</title>
         <meta
@@ -55,7 +54,7 @@ function BlogDetails(props) {
           </div>
         </div>
       </Suspense>
-    </Layout>
+    </>
   );
 }
 
