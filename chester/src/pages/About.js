@@ -9,10 +9,12 @@ import Sectiontitle from "../components/Sectiontitle";
 import Service from "../components/Service";
 import Spinner from "../components/Spinner";
 import Testimonial from "../components/Testimonial";
+import Loading from "../components/Loading";
 
 function About() {
   const [toggler, setToggler] = useState(false);
   const [information, setInformation] = useState("");
+  const [loading, setLoading] = useState(true);
   const [services, setServices] = useState([]);
   const [reviews, setReviews] = useState([]);
 
@@ -43,16 +45,41 @@ function About() {
   };
 
   useEffect(() => {
-    axios.get("/api/information").then((response) => {
-      setInformation(response.data);
-    });
-    axios.get("/api/services").then((response) => {
-      setServices(response.data);
-    });
-    axios.get("/api/reviews").then((response) => {
-      setReviews(response.data);
-    });
+    initComponent();
   }, []);
+
+  const initComponent = () => {
+    const promises = [];
+    promises.push(
+      axios.get("/api/information").then((response) => {
+        setInformation(response.data);
+      })
+    );
+
+    promises.push(
+      axios.get("/api/services").then((response) => {
+        setServices(response.data);
+      })
+    );
+
+    promises.push(
+      axios.get("/api/reviews").then((response) => {
+        setReviews(response.data);
+      })
+    );
+
+    Promise.all(promises).finally(() => {
+      setLoading(false);
+    });
+  };
+
+  const handleImageLoad = () => {
+    setLoading(false);
+  };
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <>
@@ -76,6 +103,7 @@ function About() {
                         src={src}
                         alt="aboutimage"
                         onClick={() => handleToggler(!toggler)}
+                        onLoad={handleImageLoad}
                       />
                     )}
                   </ProgressiveImage>
@@ -94,13 +122,13 @@ function About() {
                     I am <span className="color-theme">{information.name}</span>
                   </h3>
                   <p>
-                    a software engineer currently at DocuSign.
-                    With over four years in the field, I'm passionate about
-                    bringing innovative ideas to life both professionally and in
-                    my personal projects. Outside of coding, I enjoy competitive
-                    online gaming, outdoor adventures, and playing the piano.
-                    I'm excited to hear about new opportunities and how I can
-                    make my mark in the world.
+                    a software engineer currently at DocuSign. With over four
+                    years in the field, I'm passionate about bringing innovative
+                    ideas to life both professionally and in my personal
+                    projects. Outside of coding, I enjoy competitive online
+                    gaming, outdoor adventures, and playing the piano. I'm
+                    excited to hear about new opportunities and how I can make
+                    my mark in the world.
                   </p>
                   <ul>
                     {!information.name ? null : (
