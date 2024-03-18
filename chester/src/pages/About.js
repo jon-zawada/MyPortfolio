@@ -61,7 +61,7 @@ function About() {
         <meta name="description" content="" />
       </Helmet>
       <Suspense fallback={<Spinner />}>
-        <div className="mi-about-area mi-section mi-padding-top">
+        <div className="mi-about-area mi-section mi-padding-top mi-padding-bottom">
           <div className="container">
             <Sectiontitle title="About Me" />
             <div className="row align-items-center">
