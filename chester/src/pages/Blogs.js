@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { Suspense, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import BlogsView from "../components/BlogsView";
-import Layout from "../components/Layout";
 import Pagination from "../components/Pagination";
 import Sectiontitle from "../components/Sectiontitle";
 import Spinner from "../components/Spinner";
@@ -32,7 +31,7 @@ function Blogs() {
   };
 
   return (
-    <Layout>
+    <>
       <Helmet>
         <title>Blogs - Chester React Personal Portfolio Template</title>
         <meta
@@ -57,7 +56,7 @@ function Blogs() {
           </div>
         </div>
       </Suspense>
-    </Layout>
+    </>
   );
 }
 

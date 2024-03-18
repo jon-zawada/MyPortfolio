@@ -10,6 +10,8 @@ import Home from "./pages/Home";
 import Notfound from "./pages/Notfound";
 import Projects from "./pages/Projects";
 import Resumes from "./pages/Resumes";
+import BackgroundLines from "./components/BackgroundLines";
+import Header from "./components/Header";
 
 function App() {
   const [lightMode, setLightMode] = useState(false); // Made it true if you want to load your site light mode primary
@@ -41,16 +43,20 @@ function App() {
           onClick={() => handleMode()}
         ></button>
       </div>
-      <Routes>
-        <Route path="/" index element={<Home lightMode={lightMode} />} />
-        <Route path="about" element={<About />} />
-        <Route path="resume" element={<Resumes />} />
-        <Route path="projects" element={<Projects />} />
-        {/* <Route path="blogs" element={<Blogs />} />
-        <Route path="blogs/:id/:title" element={<BlogDetails />} />
-        <Route path="contact" element={<Contact />} /> */}
-        <Route path="*" element={<Notfound />} />
-      </Routes>
+      <div className="mi-wrapper">
+        <BackgroundLines />
+        <Header />
+        <Routes>
+          <Route path="/" index element={<Home lightMode={lightMode} />} />
+          <Route path="about" element={<About />} />
+          <Route path="resume" element={<Resumes />} />
+          <Route path="projects" element={<Projects />} />
+            {/* <Route path="blogs" element={<Blogs />} />
+          <Route path="blogs/:id/:title" element={<BlogDetails />} />
+          <Route path="contact" element={<Contact />} /> */}
+          <Route path="*" element={<Notfound />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }

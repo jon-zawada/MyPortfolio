@@ -5,7 +5,6 @@ import * as Icon from "react-feather";
 import { Helmet } from "react-helmet";
 import ProgressiveImage from "react-progressive-image";
 import Slider from "react-slick";
-import Layout from "../components/Layout";
 import Sectiontitle from "../components/Sectiontitle";
 import Service from "../components/Service";
 import Spinner from "../components/Spinner";
@@ -56,7 +55,7 @@ function About() {
   }, []);
 
   return (
-    <Layout>
+    <>
       <Helmet>
         <title>Portfolio - About</title>
         <meta name="description" content="" />
@@ -185,7 +184,7 @@ function About() {
           </div>
         </div> */}
       </Suspense>
-    </Layout>
+    </>
   );
 }
 

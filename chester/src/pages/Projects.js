@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { Suspense, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import Layout from "../components/Layout";
 import Pagination from "../components/Pagination";
 import ProjectsView from "../components/ProjectsView";
 import Sectiontitle from "../components/Sectiontitle";
@@ -34,7 +33,7 @@ function Projects() {
     setCurrentPage(pageNumber);
   };
   return (
-    <Layout>
+    <>
       <Helmet>
         <title>Portfolio - Projects</title>
         <meta
@@ -59,7 +58,7 @@ function Projects() {
           </div>
         </div>
       </Suspense>
-    </Layout>
+    </>
   );
 }
 

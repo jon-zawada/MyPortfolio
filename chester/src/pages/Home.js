@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { Suspense, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import Layout from "../components/Layout";
 import Particle from "../components/Particle";
 import Socialicons from "../components/Socialicons";
 import Spinner from "../components/Spinner";
@@ -16,7 +15,7 @@ function Home({ lightMode }) {
   }, []);
 
   return (
-    <Layout>
+    <>
       <Helmet>
         <title>Portfolio - Home</title>
         <meta
@@ -43,7 +42,7 @@ function Home({ lightMode }) {
           </div>
         </div>
       </Suspense>
-    </Layout>
+    </>
   );
 }
 
